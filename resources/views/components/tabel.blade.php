@@ -5,9 +5,9 @@
       <thead>
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Job</th>
-          <th>Favorite Color</th>
+          <th>Nama</th>
+          <th>Pekerjaan</th>
+          <th>Alamat</th>
         </tr>
       </thead>
       <tbody>
