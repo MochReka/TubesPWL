@@ -34,7 +34,5 @@
         </div>
     </div>
 </body>
-<div class="bottom-100">
-    <x-footer/>
-</div>
+
 </html>

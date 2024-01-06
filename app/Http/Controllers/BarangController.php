@@ -53,5 +53,12 @@ class BarangController extends Controller
 
         return redirect()->route('Barang')->with($notification);
     }
+    public function edit($id)
+        {
+            $barang = Barang::find($id);
+            $barangs = Barang::all();
+
+            return view('Barang.edit', compact('barang', 'barangs'));
+        }
 
 }

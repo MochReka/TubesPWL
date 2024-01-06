@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BarangKeluarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/Barang/create', [BarangController::class, 'create'])->name('Barang.create');
     Route::post('/Barang', [BarangController::class, 'store'])->name('Barang.store');
     Route::delete('/Barang/{id}', [BarangController::class, 'destroy'])->name('Barang.destroy');
+    Route::get('/barang/{id}/edit',[BarangController::class, 'edit'])->name('Barang.edit');
+    Route::match(['put', 'patch'], '/barang/{id}',[BarangController::class, 'update'])->name('Barang.update');
    
 });
-
+Route::middleware('auth')->group(function () {
+    Route::get('/BarangKeluar', [BarangKeluarController::class, 'index'])->name('BarangKeluar');
+    Route::get('/BarangKeluar/create', [BarangKeluarController::class, 'create'])->name('BarangKeluar.create');
+    Route::post('/BarangKeluar', [BarangKeluarController::class, 'store'])->name('BarangKeluar.store');
+    Route::delete('/BarangKeluar/{id}', [BarangKeluarController::class, 'destroy'])->name('BarangKeluar.destroy');
+    Route::get('/BarangKeluar/{id}/edit',[BarangKeluarController::class, 'edit'])->name('BarangKeluar.edit');
+    Route::match(['put', 'patch'], '/BarangKeluar/{id}',[BarangKeluarController::class, 'update'])->name('BarangKeluar.update');
+    Route::get('/get-nama-barang', [BarangKeluarController::class, 'getNamaBarangByKodeBarang']);  
+});
 require __DIR__.'/auth.php';

@@ -13,9 +13,9 @@
     <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
         <a class="font-medium text-white sm:py-6" href="{{route('Barang')}}" aria-current="page">Barang</a>
-        <a class="font-medium text-white/[.8] hover:text-white sm:py-6" href="#">Account</a>
-        <a class="font-medium text-white/[.8] hover:text-white sm:py-6" href="#">Work</a>
-        <a class="font-medium text-white/[.8] hover:text-white sm:py-6" href="#">Blog</a>
+        <a class="font-medium text-white sm:py-6" href="{{route('BarangKeluar')}}" aria-current="page">Barang Keluar</a>
+       
+
 
         <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
           <button type="button" class="flex items-center w-full text-white/[.8] hover:text-white font-medium">

@@ -24,9 +24,7 @@
         <x-navbar/>
     </div>
     <div class="flex-container">
-        {{-- <div class="sidebar">
-            <x-sidebar/>    
-        </div> --}}
+ 
         <div class="content">
             <div class="p-2 m-3 border-spacing-8">
                 <x-primary-button tag="a" href="{{ route('Barang.create') }}">Add</x-primary-button>
@@ -51,6 +49,7 @@
                             <td>{{$barang->jenis}}</td>
                             <td>{{$barang->harga}}</td>
                             <td>
+                                {{-- <x-primary-button tag="a" href="{{route('Barang.edit', $barang->id)}}">Edit</x-primary-button> --}}
                                 <form action="{{ route('Barang.destroy', $barang->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
