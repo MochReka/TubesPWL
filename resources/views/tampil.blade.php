@@ -29,7 +29,7 @@
         </div>
         <div class="content">
             <div class="p-2 m-3 border-spacing-8">
-                <x-tabel/>    
+                  
             </div>
         </div>
     </div>
